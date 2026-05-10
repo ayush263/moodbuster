@@ -1,0 +1,211 @@
+.sentiment-analysis {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  margin: 2rem 0;
+}
+
+.sentiment-analysis h3 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin: 0 0 2rem 0;
+  font-weight: 700;
+}
+
+.sentiment-analysis h4 {
+  font-size: 1.125rem;
+  color: #1f2937;
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 600;
+}
+
+/* Sentiment Overview */
+.sentiment-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sentiment-card {
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.sentiment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.sentiment-card.positive {
+  background: linear-gradient(135deg, #dcfce7 0%, #d1fae5 100%);
+  border: 2px solid #22c55e;
+}
+
+.sentiment-card.negative {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  border: 2px solid #ef4444;
+}
+
+.sentiment-card.neutral {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+}
+
+.sentiment-icon {
+  font-size: 2rem;
+}
+
+.sentiment-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.sentiment-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.sentiment-percent {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Sentiment Chart */
+.sentiment-chart {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.sentiment-chart h4 {
+  margin-top: 0;
+}
+
+/* Keywords Section */
+.keywords-section {
+  margin-bottom: 2rem;
+}
+
+.keywords-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+.keyword {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.keyword:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Sentiment Insights */
+.sentiment-insights {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.insight-item {
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  border-left: 4px solid;
+}
+
+.insight-item.success {
+  background: #dcfce7;
+  border-left-color: #22c55e;
+  color: #15803d;
+}
+
+.insight-item.warning {
+  background: #fee2e2;
+  border-left-color: #ef4444;
+  color: #7f1d1d;
+}
+
+.insight-item.info {
+  background: #dbeafe;
+  border-left-color: #3b82f6;
+  color: #1e40af;
+}
+
+.insight-item svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.insight-title {
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.insight-desc {
+  font-size: 0.875rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.sentiment-loading {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .sentiment-analysis {
+    padding: 1rem;
+  }
+
+  .sentiment-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .keywords-cloud {
+    justify-content: center;
+  }
+
+  .keyword {
+    font-size: 0.875rem;
+  }
+
+  .insight-item {
+    flex-direction: column;
+  }
+}

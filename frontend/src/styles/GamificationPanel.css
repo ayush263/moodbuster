@@ -1,0 +1,264 @@
+.gamification-panel {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
+}
+
+.gamification-panel h3 {
+  font-size: 1.75rem;
+  margin: 0 0 2rem 0;
+  font-weight: 700;
+}
+
+.gamification-panel h4 {
+  font-size: 1.125rem;
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 600;
+}
+
+/* Progress Section */
+.progress-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.level-card,
+.streak-card,
+.points-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.level-card:hover,
+.streak-card:hover,
+.points-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.level-display {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.level-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+.level-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #fbbf24 0%, #f97316 100%);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.points-text {
+  font-size: 0.875rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.streak-card,
+.points-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.streak-icon,
+.points-icon {
+  opacity: 0.8;
+}
+
+.streak-content,
+.points-content {
+  flex: 1;
+}
+
+.streak-number,
+.points-number {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+}
+
+.streak-label,
+.points-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Badges Section */
+.badges-section,
+.all-badges-section {
+  margin-bottom: 2rem;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.badge.earned {
+  background: rgba(34, 197, 94, 0.3);
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+.badge.earned:hover {
+  background: rgba(34, 197, 94, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+}
+
+.badge.locked {
+  opacity: 0.5;
+}
+
+.badge-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.badge-info {
+  flex: 1;
+  text-align: left;
+}
+
+.badge-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.badge-desc {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* Milestones Section */
+.milestones-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.milestones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.milestone {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.milestone.completed {
+  background: rgba(34, 197, 94, 0.2);
+  border-left-color: rgba(34, 197, 94, 0.8);
+}
+
+.milestone-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.milestone.completed .milestone-icon {
+  background: rgba(34, 197, 94, 0.3);
+  color: #86efac;
+}
+
+.milestone-info {
+  flex: 1;
+}
+
+.milestone-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.milestone-progress {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .gamification-panel {
+    padding: 1rem;
+  }
+
+  .progress-section {
+    grid-template-columns: 1fr;
+  }
+
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .badge {
+    flex-direction: column;
+  }
+
+  .badge-info {
+    text-align: center;
+  }
+
+  .milestones-list {
+    gap: 0.75rem;
+  }
+}
